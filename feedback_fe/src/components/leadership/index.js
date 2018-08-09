@@ -138,7 +138,7 @@ class Leadership extends PureComponent {
                     <RenderForm index={0} options={this.state.options} handleOnChange={this.handleOnChange} nameSelected={this.nameSelected} />
                     {this.generateForm(this.state.feedbackToAdd)}
                     <div className='submit-button'>
-                        <div className="submit" onClick={this.repeat}>Add a new Feedback</div>
+                        <div className="submit" onClick={this.repeat}>Add a new Member</div>
                         <div onClick={this.createFeedback} className='submit'>Go to Next Page</div>
                     </div>
                 </div>

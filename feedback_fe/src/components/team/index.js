@@ -22,7 +22,7 @@ class Team extends PureComponent {
             return item.value !== empid && item.project == emp.project;
         });
         const options = Employees.filter(item => {
-            const notIncluded = ['HR', 'Admin', 'Training', 'Sales', 'Management'].includes(item.project);
+            const notIncluded = ['Support', 'Marketing', 'Finance', 'Recruitment', 'HR', 'Training', 'Admin', 'Management'].includes(item.project);
             return (
                 (item.value !== empid && countProjects.length < 6 && !notIncluded) ||
                 (item.value !== empid && item.project == emp.project && !notIncluded)
@@ -139,7 +139,7 @@ class Team extends PureComponent {
                     <RenderForm options={this.state.options} index={0} handleOnChange={this.handleOnChange} nameSelected={this.nameSelected} />
                     {this.generateForm(this.state.feedbackToAdd)}
                     <div className='submit-button'>
-                        <div className="submit" onClick={this.repeat}>Add a new Feedback</div>
+                        <div className="submit" onClick={this.repeat}>Add a new Member</div>
                         <div onClick={this.createFeedback} className='submit'>Go to Next Page</div>
                     </div>
                 </div>
