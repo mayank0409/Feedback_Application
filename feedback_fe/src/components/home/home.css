@@ -1,0 +1,26 @@
+.home-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;  
+}
+
+.home {
+    font-size: 30px;
+    color: #6c1d5f
+}
+
+input {
+    outline: none;
+    font-size: 26px;
+    margin-left: 16px;
+    padding: 5px;
+}
+
+button {
+    background-color: #6c1d5f;
+    color: #ffffff;
+    height: 50px;
+    width: 150px;
+    font-size: 20px;
+    margin-top: 50px;   
+}

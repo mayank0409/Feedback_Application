@@ -1,0 +1,65 @@
+.body {
+    display: flex;
+    justify-content: center;
+    width: 100%;   
+    flex-direction: column;
+    font-size: 22px;
+}
+
+.body .select-user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.body .select-user .dropdown {
+    width: 20%;
+}
+
+.body .radio {
+    margin-top: 80px;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.body .radio .cssForAll {
+    display: flex;
+    margin: 20px;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%
+}
+
+.body .radio .cssForAll .cssForItem {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    margin: 20px;   
+}
+
+.body .radio .cssForAll .cssForItem label {
+    margin-left: 10px;
+}
+
+.body .submit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.body .submit-button .submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6c1d5f;
+    color: #ffffff;
+    height: 50px;
+    width: 150px;
+    margin-left: 20px;
+}

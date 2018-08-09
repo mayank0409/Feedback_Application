@@ -1,0 +1,170 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+.page-header{
+  color: #6c1d5f;
+  padding-bottom: 12px;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+button {
+  outline: none;
+  cursor: pointer;  
+}
+.radioButton{
+  width: 30%;
+  text-align: left;
+  margin: 10px;
+}
+.radioButton input{
+  margin: 10px;
+}
+h1, h2{
+  margin: 0;
+}
+*{
+  box-sizing: border-box;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  width: 100%;   
+  flex-direction: column;
+  font-size: 22px;
+  max-width: 1260px;
+  margin: 25px auto;
+}
+
+.body .select-user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.body .select-user .dropdown {
+  width: 20%;
+}
+
+.body .radio {
+  margin-top: 40px;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.body .radio .cssForAll {
+  display: flex;
+  margin: 20px;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 80%
+}
+
+.body .radio .cssForAll .cssForItem {
+  display: flex;
+  align-items: center;
+  width: 400px;
+  margin: 20px;   
+}
+
+.body .radio .cssForAll .cssForItem label {
+  margin-left: 10px;
+}
+
+.body .submit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.submit {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #6c1d5f;
+  color: #ffffff;
+  height: 50px;
+  width: 200px;
+  margin: 10px;
+}
+.add-button{
+  margin-right: 20px;
+}
+.border-bottom{
+  border-bottom: 1px solid rgba(128, 128, 128, .5);
+  width: 80%;
+  margin: auto;
+  margin-bottom: 24px;
+}
+.modal-container{
+  top: 0;
+  left: 0;
+  content: '';
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, .7);
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.modal{
+  max-width: 500px;
+  position: relative;
+  background: white;
+  display: flex;
+    font-size: 22px;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+    padding: 12px;
+    border-radius: 5px;
+    line-height: 1.5;
+}
+.modal .modal-header{
+  color: #6c1d5f;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(128, 128, 128, .5);
+}
+.modal .modal-body{
+  padding-top: 20px;
+}
+.modal .modal-footer{
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
