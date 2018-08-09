@@ -22,7 +22,7 @@ class Team extends PureComponent {
             return item.value !== empid && item.project == emp.project;
         });
         const options = Employees.filter(item => {
-            const notIncluded = ['Support', 'Sales', 'Management'].includes(item.project);
+            const notIncluded = ['HR', 'Admin', 'Training', 'Sales', 'Management'].includes(item.project);
             return (
                 (item.value !== empid && countProjects.length < 6 && !notIncluded) ||
                 (item.value !== empid && item.project == emp.project && !notIncluded)

@@ -12,7 +12,7 @@ class Header extends Component {
             </Link>
                 </div>
             <div className='header title'>
-                <h1>Feedback Quiz</h1>
+                <h1>Put A Title To A Name</h1>
             </div>
             <div className='header user'>
             {this.props.user && <h2>Hi, {this.props.user}</h2>}

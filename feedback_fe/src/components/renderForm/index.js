@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import Dropdown from 'react-dropdown';
+import Dropdown from 'react-select';
 import Titles from '../../../src/titles.json';
 
 const titles = Titles;
@@ -31,7 +31,7 @@ export default class RenderForm extends PureComponent {
             <div key={options.value}>
                 <div className='select-user'>
                     <div>Please select a title which you think is appropriate for your team member:</div>
-                    <div className='dropdown' key={options.value}><Dropdown value={this.state.label} options={options} key={options.value} onChange={this.nameSelected} /></div>
+                    <div className='dropdown' key={options.value}><Dropdown options={options} key={options.value} onChange={this.nameSelected} /></div>
                 </div>
                 <div className='body radio'>
                     {
