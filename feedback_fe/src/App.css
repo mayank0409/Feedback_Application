@@ -31,17 +31,12 @@
   to { transform: rotate(360deg); }
 }
 
-button {
-  outline: none;
-  cursor: pointer;  
-}
 .radioButton{
   width: 30%;
   text-align: left;
   margin: 10px;
-}
-.radioButton input{
-  margin: 10px;
+  flex-direction: row;
+  display: flex;
 }
 h1, h2{
   margin: 0;
@@ -167,4 +162,116 @@ h1, h2{
   display: flex;
   justify-content: center;
   margin-top: 24px;
+}
+.home-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;  
+}
+
+.home {
+  font-size: 30px;
+  color: #6c1d5f
+}
+
+input {
+  outline: none;
+  font-size: 26px;
+  margin-left: 16px;
+  padding: 5px;
+}
+
+button {
+  outline: none;
+  cursor: pointer;  
+  background-color: #6c1d5f;
+  color: #ffffff;
+  height: 50px;
+  width: 150px;
+  font-size: 20px;
+  margin-top: 50px;
+  border-radius: 3px;
+  border: 0;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  width: 100%;
+  background-color: #6c1d5f;
+  color: #ffffff;
+}
+
+.header .img {
+  padding: 0;
+}
+
+.header .title {
+  font-size: 16px;
+  padding: 0;
+  justify-content: center;
+}
+
+.header .user {
+  font-size: 14px;
+  padding: 0;
+  justify-content: flex-end;
+}
+@media only screen and (max-width: 600px) {
+  .home-input input[type="text"] {
+    font-size: 20px;
+    width: 80%;
+    margin: 16px;
+    padding: 5px;
+    border: 1px solid rgba(128, 128, 128, .5);
+}
+.dropdown input{
+  margin: 0;
+}
+.home{
+  font-size: 20px;
+}
+  .body{
+    font-size: 16px;
+  }
+  button{
+    margin: 30px 7px 0;
+  }
+  .body .submit-button{
+    margin: 0;
+  }
+  .modal{
+    width: 96vw;
+  }
+  .home-container {
+    flex-direction: column;
+    margin: 50px 12px 0;
+  }
+  .header .title{
+    font-size: 9px;
+  }
+  .header .user{
+    font-size: 9px;
+  }
+  .body .radio{
+    justify-content: flex-start;
+  }
+  .radioButton{
+    width: 50%;
+    font-size: 14px;
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  .page-header{
+    font-size: 22px;
+  }
+  .body .select-user{
+    flex-direction: column;
+  }
+  .body .select-user .dropdown {
+    padding-top: 10px;
+    width: 80%;
+}
 }

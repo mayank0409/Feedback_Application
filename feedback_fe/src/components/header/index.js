@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../src/xebiaLogo.svg';
-import './header.css';
 
 class Header extends Component {
     render() {

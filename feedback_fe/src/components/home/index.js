@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './home.css';
 import Employee from '../../employees.json';
 import Header from '../header';
 import Modal from '../../modal';
@@ -46,43 +45,46 @@ class Home extends Component {
   closePopup() {
     this.setState({
       openModal: false
-    })}
-    handleChange(event) {
-      this.setState({
-        employee: {
-          value: event.target.value.toUpperCase()
-        }
-      });
-    }
-
-    render() {
-      const { openModal, modalHeader, modalBody } = this.state;
-      return (<div>
-        <Header />
-        <div className='home-container'>
-          <div className='home'>Please enter your Employee Code</div>
-          <input type='text' required name='employeeCode' value={this.state.employee.value} placeholder='Emp. Code' onChange={this.handleChange} />
-        </div>
-        {/* <Link to={`/team/${this.state.employee.value}`} > */}
-          <button type='button' onClick={this.findEmp}>Let's Go</button>
-        {/* </Link> */}
-        {openModal && <Modal>
-                    <div className="modal-container">
-                        <div className="modal">
-                            <h2 className="modal-header">
-                                {modalHeader}
-                            </h2>
-                            <div className="modal-body">
-                                {modalBody}
-                            </div>
-                            <div className="modal-footer">
-                                <div onClick={this.closePopup} className='submit'>Ok</div>
-                            </div>
-                        </div>
-                    </div>
-                </Modal>}
-      </div>)
-    }
+    })
+  }
+  handleChange(event) {
+    this.setState({
+      employee: {
+        value: event.target.value.toUpperCase()
+      }
+    });
   }
 
-  export default Home;
+  render() {
+    const { openModal, modalHeader, modalBody } = this.state;
+    return (<div>
+      <Header />
+      <div className='home-container'>
+        <div className='home'>Please enter your Employee Code</div>
+        <div className="home-input">
+          <input type='text' required name='employeeCode' value={this.state.employee.value} placeholder='Emp. Code' onChange={this.handleChange} />
+        </div>
+      </div>
+      {/* <Link to={`/team/${this.state.employee.value}`} > */}
+      <button type='button' onClick={this.findEmp}>Let's Go</button>
+      {/* </Link> */}
+      {openModal && <Modal>
+        <div className="modal-container">
+          <div className="modal">
+            <h2 className="modal-header">
+              {modalHeader}
+            </h2>
+            <div className="modal-body">
+              {modalBody}
+            </div>
+            <div className="modal-footer">
+              <div onClick={this.closePopup} className='submit'>Ok</div>
+            </div>
+          </div>
+        </div>
+      </Modal>}
+    </div>)
+  }
+}
+
+export default Home;

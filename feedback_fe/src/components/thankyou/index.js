@@ -1,5 +1,4 @@
 import React from 'react';
-import './thankyou.css';
 import Header from '../header';
 
 const Home = () => {

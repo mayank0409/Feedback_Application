@@ -38,7 +38,7 @@ export default class RenderForm extends PureComponent {
                         titles.map(item => {
                             return <div className='radioButton'>
                                 <input type="radio" required name={`titels_${index}`} value={item} onChange={this.handleOnChange} />
-                                {item}
+                                <div>{item}</div>
                             </div>
                         })
                     }
