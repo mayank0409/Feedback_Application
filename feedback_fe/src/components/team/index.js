@@ -3,6 +3,7 @@ import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 import Header from '../header';
 import Modal from '../../modal';
+import Loader from '../../loader';
 import Plus from '../../../src/plus.svg';
 import Employees from '../../../src/employees.json';
 import RenderForm from '../renderForm';
@@ -36,6 +37,7 @@ class Team extends PureComponent {
             options,
             selectedLabel: '',
             title: '',
+            openLoader: false,
             openModal: false,
             modalHeader: '',
             modalBody: ''
@@ -75,17 +77,26 @@ class Team extends PureComponent {
                 title: this.state.title
             }
             this.setState({
-                feedbacks: [...this.state.feedbacks, feedback]
+                feedbacks: [...this.state.feedbacks, feedback],
+                openLoader: true
             }, () => {
                 axios.post('https://thawing-anchorage-33986.herokuapp.com/feedback', {
                     data: this.state.feedbacks
                   })
                   .then(() => {
+                      this.setState({
+                          openLoader: false
+                      });
                     window.location.pathname = `/leadership/${this.state.emp.value}`;
                     // localStorage.setItem("peerReview", JSON.stringify(this.state.feedbacks));
                   })
                   .catch(function (error) {
-                    console.log(error);
+                    this.setState({
+                        openLoader: false,
+                        openModal: true,
+                        modalHeader: 'Error!!!',
+                        modalBody: `Error: ${error}`
+                    });;
                   });
             })
         } else {
@@ -130,7 +141,7 @@ class Team extends PureComponent {
         }
     }
     render() {
-        const { openModal, modalHeader, modalBody } = this.state;
+        const { openLoader, openModal, modalHeader, modalBody } = this.state;
         return (
             <div>
                 <Header user={this.state.emp.label} />
@@ -158,6 +169,7 @@ class Team extends PureComponent {
                         </div>
                     </div>
                 </Modal>}
+                { openLoader && <Loader />}
             </div>
         )
     }

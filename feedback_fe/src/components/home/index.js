@@ -29,20 +29,17 @@ class Home extends Component {
       return value.value === empid;
     })
     if (emp.project !== 'Management') {
-      console.log('QQQQ');
       window.location.pathname = `/team/${this.state.employee.value}`;
     } else if (emp.project == 'Management') {
       window.location.pathname = `/leadership/${this.state.employee.value}`;
     }
     else {
-      console.log('EEEE');
       this.setState({
         openModal: true,
         modalHeader: 'Warning!!!',
         modalBody: 'Please enter a valid employee id e.g. XI123 / XIC123.'
       })
     }
-    console.log('!!!!', emp);
     return true;
   }
   closePopup() {

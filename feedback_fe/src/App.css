@@ -218,7 +218,19 @@ button {
   padding: 0;
   justify-content: flex-end;
 }
-@media only screen and (max-width: 600px) {
+.loader-container{
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, .65);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 768px) {
   .home-input input[type="text"] {
     font-size: 20px;
     width: 80%;
