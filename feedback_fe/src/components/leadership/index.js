@@ -24,7 +24,7 @@ class Leadership extends PureComponent {
         const options = Employees.filter(item => {
             const included = ['Management'].includes(item.project);
             return (
-                included
+                item.value !== empid && included
             );
         });
         console.log(options);

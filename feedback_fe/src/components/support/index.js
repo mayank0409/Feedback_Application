@@ -25,7 +25,7 @@ class Support extends PureComponent {
         const options = Employees.filter(item => {
             const included = ['Support', 'Marketing', 'Finance', 'Recruitment', 'HR', 'Training', 'Admin'].includes(item.project);
             return (
-                included
+                item.value !== empid && included
             );
         });
         console.log(options);
