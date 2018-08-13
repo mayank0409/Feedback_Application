@@ -28,10 +28,13 @@ class Home extends Component {
     const emp = Employee.find((value) => {
       return value.value === empid;
     })
-    if (emp) {
+    if (emp.project !== 'Management') {
       console.log('QQQQ');
       window.location.pathname = `/team/${this.state.employee.value}`;
-    } else {
+    } else if (emp.project == 'Management') {
+      window.location.pathname = `/leadership/${this.state.employee.value}`;
+    }
+    else {
       console.log('EEEE');
       this.setState({
         openModal: true,
