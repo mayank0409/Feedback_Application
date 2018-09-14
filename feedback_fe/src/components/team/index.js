@@ -24,9 +24,10 @@ class Team extends PureComponent {
         });
         const options = Employees.filter(item => {
             const notIncluded = ['Support', 'Marketing', 'Finance', 'HR', 'Admin', 'Management'].includes(item.project);
+            const included = ['Manager'].includes(item.project);
             return (
                 (item.value !== empid && countProjects.length < 6 && !notIncluded) ||
-                (item.value !== empid && item.project == emp.project && !notIncluded)
+                (item.value !== empid && item.project == emp.project && !notIncluded) || included
             );
         });
         console.log(options);
